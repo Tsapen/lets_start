@@ -1,0 +1,92 @@
+func start()
+(
+    matrix cell curxray(5u,5u);
+    matrix unsigned nums(2u,100u);
+    matrix unsigned stack(1u,300u);
+
+    unsigned tops<-1u;
+
+    unsigned result<-0u;
+
+
+    unsigned counter <- 0u;
+    testrep(counter < 100u)
+    (
+        nums(0u,counter)<-counter;
+        nums(1u,counter)<-0u;
+        counter <- counter +1u;
+    )
+
+
+    stack(0u,tops) <- location;
+    nums(1u,location)<-1u;
+    testrep(tops*(location - finish)*( crash - 1u ))
+    (
+
+            location <- stack(0u,tops);
+            tops <- tops - 1u;
+
+            testonce(location - finish)
+            (
+                testonce(nums(1u,location) = 1u)
+                    (
+                        nums(1u,location) <- 2u;
+                        curxray <- xray;
+                        testonce( ntop( curxray(3u,3u) ) )
+                        (
+                            top;
+                            testonce(nums(1u,location)=0u)
+                            (
+                                tops<-tops+1u;
+                                stack(0u,tops)<-location;
+                                nums(1u,location)<-1u;
+                            )
+                            bottom;
+                        )
+                        testonce(nleft(curxray(3u,3u)))
+                        (
+                            left;
+                            testonce(nums(1u,location)=0u)
+                            (
+                                tops<-tops+1u;
+                                stack(0u,tops)<-location;
+                                nums(1u,location)<-1u;
+                            )
+                            right;
+                        )
+                        testonce(nbottom(curxray(3u,3u)))
+                        (
+                            bottom;
+                            testonce(nums(1u,location)=0u)
+                            (
+                                tops<-tops+1u;
+                                stack(0u,tops)<-location;
+                                nums(1u,location)<-1u;
+                            )
+                            top;
+                        )
+                        testonce(nright(curxray(3u,3u)))
+                        (
+                            right;
+                            testonce(nums(1u,location)=0u)
+                            (
+                                tops<-tops+1u;
+                                stack(0u,tops)<-location;
+                                nums(1u,location)<-1u;
+                            )
+                            left;
+                        )
+
+
+                    )
+
+            )
+
+
+    )
+    testonce(location - finish)
+    (
+        location<-101u;
+    )
+    location;
+)

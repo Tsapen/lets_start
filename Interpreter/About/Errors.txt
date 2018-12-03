@@ -1,0 +1,17 @@
+func start()
+(
+unsigned loc <- 3u;
+unsigned n <-0u;
+testrep ) x ;
+(
+    n <- loc / 0u;
+)
+testrep ; x)
+(
+    n <- loc + 1u;
+)
+
+x <- call fnc(,8u);
+
+n;
+)

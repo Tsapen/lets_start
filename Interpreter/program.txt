@@ -1,0 +1,33 @@
+func fib(unsigned x ) (
+    unsigned res <- 0u;
+    unsigned cur1 <- 0u;
+    unsigned cur2 <- 0u;
+    unsigned res1 <- 0u;
+    unsigned res2 <- 0u;
+    unsigned flag <- 1u;
+    testonce( x = 1u )
+    (
+        res <- 1u;
+        flag <- 0u;
+    )
+
+    testonce( x = 2u )
+    (
+        res <- 1u;
+        flag <- 0u;
+    )
+    testonce ( flag )
+    (
+        cur1 <- x - 1u;
+        res1 <- call fib( cur1 );
+        cur2 <- x - 2u;
+        res2 <- call fib ( cur2 );
+        res <- res1 + res2;
+    )
+    res;
+)
+
+func start()(
+unsigned x <- call fib(9u);
+x;
+)
