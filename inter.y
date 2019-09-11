@@ -264,7 +264,6 @@ void yyerror(const char*s){
 int main(void) {
 	yyin = fopen("program.txt","r");
     yyparse();
-    cout<<"\n"<<execute_flag<<"\n";
     if(execute_flag)
         starts();
 	return 0;

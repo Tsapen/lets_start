@@ -9,7 +9,7 @@
 
 using namespace std;
 
-void oe(string _err);
+void OutErr(string _err);
 
 class Node
 {
