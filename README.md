@@ -8,7 +8,7 @@ token.l - lexic tokens description;
 (they're used for lexical and gramatical analysers);  
 gram_proc.cpp - implements the construction of the program of our artifical language on c++;  
 inter.cpp - main file for the interpretator  
-robot.cpp -  robot actions description: XRAY(wall existing scan) and go <direction>;  
+robot.cpp -  robot actions description: XRAY(wall existing scan) and go DIRECTION;  
 map.txt - robot world description;  
 program.txt - execute file. You can copy examples into program.txt to test the program.  
 ***
