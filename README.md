@@ -31,12 +31,5 @@ Errors.txt contains examples of input errors.
 The name and place of the mistake will be in the output after unsuccessful try to run the program.  
 ***
 # USAGE  
-Installing: 
-sudo apt install bison  
-sudo apt install flex  
-  
-Analysers generating:   
-bison -d inter.y && flex token.l  
-  
 Build and run:  
 g++ inter.tab.c inter.cpp gram_proc.cpp lex.yy.c robot.cpp  && ./a.out  
